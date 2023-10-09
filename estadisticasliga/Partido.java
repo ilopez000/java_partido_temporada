@@ -47,4 +47,19 @@ public class Partido {
     public void imprimir_datos_partido(){
         System.out.println(fecha+"|"+eq_local+"|"+eq_visitante);
     }
+    
+    //devuelve los goles que ha marcado el eq local
+    public int get_total_goles_equipo_local(){
+        return total_goles_local;
+    }
+    
+    //devuelve el nombre del equipo local
+    public String get_nombe_equipo_local(){
+        return eq_local;
+    }
+    
+    //devuelve el nombre del equipo local
+    public String get_nombe_equipo_visitante(){
+        return eq_visitante;
+    }    
 }
