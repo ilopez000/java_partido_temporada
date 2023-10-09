@@ -11,17 +11,17 @@ package com.mycompany.estadisticasliga;
 public class Partido {
     
     //Date,Time,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR
-    String fecha;
-    String eq_local;
-    String eq_visitante;
-    int total_goles_local;
-    int total_goles_visitante;
-    int primera_parte_goles_local;
-    int primera_parte_goles_visitante;
-    int tiros_puerta_local;
-    int tiros_puerta_visitante;
-    int corners_local;
-    int corners_visitante;
+    private String fecha;
+    private String eq_local;
+    private String eq_visitante;
+    private int total_goles_local;
+    private int total_goles_visitante;
+    private int primera_parte_goles_local;
+    private int primera_parte_goles_visitante;
+    private int tiros_puerta_local;
+    private int tiros_puerta_visitante;
+    private int corners_local;
+    private int corners_visitante;
     
     //creadora
     public Partido(String fecha_, String eq_local_,
@@ -43,4 +43,8 @@ public class Partido {
         this.corners_visitante=corners_visitante_;
     }
     
+    //mostrar por consola los datos del partido
+    public void imprimir_datos_partido(){
+        System.out.println(fecha+"|"+eq_local+"|"+eq_visitante);
+    }
 }

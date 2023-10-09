@@ -11,6 +11,7 @@ package com.mycompany.estadisticasliga;
 public class EstadisticasLiga {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Temporada temporada=new Temporada("2022", "C:\\Users\\ignac\\Documents\\NetBeansProjects\\EstadisticasLiga\\src\\main\\java\\com\\mycompany\\estadisticasliga\\SP1.csv");
+        temporada.imprimir_partidos();
     }
 }

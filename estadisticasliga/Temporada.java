@@ -15,7 +15,7 @@ import java.util.ArrayList;
  */
 public class Temporada {
     
-    private ArrayList<Partido> partidos;
+    private ArrayList<Partido> partidos=new ArrayList<>();
     private String year;
     private String fichero_datos;
     
@@ -32,7 +32,7 @@ public class Temporada {
         
         try (BufferedReader br = new BufferedReader(new FileReader(fichero_datos))) {
             String linea;
-            br.readLine();
+            br.readLine(); //cabecera que no procesamos
             while ((linea = br.readLine()) != null) {
                 // Suponiendo que las comas son los separadores de los datos
                 // y no están dentro de los campos del CSV
@@ -59,10 +59,18 @@ public class Temporada {
                                   Integer.parseInt(datos.get(i)[17]),
                                   Integer.parseInt(datos.get(i)[18])
                                 );
+            p.imprimir_datos_partido();
+            partidos.add(p);
         }
-        String aux=datos.get(0)[0];
-        
-        
     }
     
+        //imprime los datos por consola de todos los partidos
+        public void imprimir_partidos(){
+            for(int i=0; i<partidos.size(); i++){
+                partidos.get(i).imprimir_datos_partido();
+            }
+        }
+        
 }
+    
+
