@@ -23,7 +23,7 @@ public class Partido {
     private int corners_local;
     private int corners_visitante;
     
-    //creadora
+    //cronstructoras
     public Partido(String fecha_, String eq_local_,
             String eq_visitante_, int total_goles_local_,
             int total_goles_visitante_, int primera_parte_goles_local_,
@@ -53,6 +53,11 @@ public class Partido {
         return total_goles_local;
     }
     
+    //devuelve los goles que ha marcado el eq visitante
+    public int get_total_goles_equipo_visitante(){
+        return total_goles_visitante;
+    }
+    
     //devuelve el nombre del equipo local
     public String get_nombe_equipo_local(){
         return eq_local;
@@ -62,4 +67,6 @@ public class Partido {
     public String get_nombe_equipo_visitante(){
         return eq_visitante;
     }    
+    
+
 }
