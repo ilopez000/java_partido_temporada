@@ -29,7 +29,7 @@ public class Temporada {
         this.fichero_datos=fichero_datos_;
         cargar_datos();
     }
-
+    
     //imprimir diccionario
     public void imprimir_diccionario() {
         for (Map.Entry<String, Integer> entrada : mapa_ganados.entrySet()) {
