@@ -29,6 +29,13 @@ public class Temporada {
         this.fichero_datos=fichero_datos_;
         cargar_datos();
     }
+
+    //imprimir diccionario
+    public void imprimir_diccionario() {
+        for (Map.Entry<String, Integer> entrada : mapa_ganados.entrySet()) {
+            System.out.println(entrada.getKey() + ": " + entrada.getValue());
+        }
+    }
     
     //rellenar el diccionario mapa_ganados con el número 
     //de partidos que ha ganado cada equipo
